@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - BloodConnect</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+
+  <div class="auth-container">
+    <h2>Welcome Back</h2>
+    <p>Login to your account</p>
+
+    <form id="loginForm">
+
+      <!-- Email -->
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" required />
+      </div>
+
+      <!-- Normal Login -->
+      <button type="submit" class="btn-primary">
+        Login
+      </button>
+
+      <div class="divider">OR</div>
+
+      <!-- Google Login -->
+      <button type="button" id="googleBtn" class="btn-google">
+        Continue with Google
+      </button>
+
+    </form>
+
+    <div class="switch-text">
+      Don’t have an account?
+      <a href="signup.html">Sign up</a>
+    </div>
+  </div>
+
+  <!-- ===============================
+       FIREBASE GOOGLE LOGIN
+  =============================== -->
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { 
+    getAuth, 
+    GoogleAuthProvider, 
+    signInWithPopup 
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCOpNxLh3naiiz8RDQwTgcNtZd_ugg_2RQ",
+    authDomain: "online-blood-donation-portal.firebaseapp.com",
+    projectId: "online-blood-donation-portal",
+    appId: "1:600816180299:web:a5fd55ea374268598b01ce"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const googleBtn = document.getElementById("googleBtn");
+
+  googleBtn.addEventListener("click", async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+
+      // 🔥 SEND email + name (NOT token)
+      const response = await fetch("http://127.0.0.1:5000/api/auth/google", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: user.email,
+          name: user.displayName
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message || "Google login failed");
+        return;
+      }
+
+      // Store token + user
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      window.location.href = "../home/home.html";
+
+    } catch (error) {
+      console.error("Google login error:", error);
+      alert("Google Login Failed");
+    }
+  });
+</script>
+
+  <!-- Normal Email/Password login -->
+  <script src="auth.js"></script>
+
+</body>
+</html>

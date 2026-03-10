@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.terms-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 25px;
+  color: #444;
+}
+
+p {
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.last-line {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+
+/* Disable text selection globally */
+body {
+  user-select: none;
+}
+
+/* Allow selection ONLY inside input and textarea */
+input,
+textarea {
+  user-select: text;
+}

@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #990000, #ff6666);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+}

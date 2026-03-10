@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BloodConnect | Hospital Digital System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <script defer src="home.js"></script>
+
+  <style>
+  /* =============================
+     CHARITY SECTION
+  ============================= */
+
+  .charity-section {
+      position: relative;
+      padding: 80px 20px;
+      text-align: center;
+      background: white;
+      overflow: hidden;
+      transition: 0.5s ease;
+  }
+
+  .charity-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(122,252,71,0.9), rgba(167,255,84,0.9)),
+                  url("hospital-bg.jpg") center/cover no-repeat;
+      opacity: 0;
+      transition: 0.6s ease;
+      z-index: 0;
+  }
+
+  .charity-section:hover::before {
+      opacity: 1;
+  }
+
+  .charity-container {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+  }
+
+  .charity-section h2,
+  .charity-section p {
+      color: #222;
+      transition: 0.5s ease;
+  }
+
+  .charity-section:hover h2,
+  .charity-section:hover p {
+      color: white;
+  }
+
+  .charity-btn {
+      display: inline-block;
+      background: #f80909;
+      color: white;
+      padding: 14px 35px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+  }
+
+  .charity-btn:hover {
+      background: #1e8f3f;
+      transform: translateY(-2px);
+  }
+  </style>
+</head>
+
+<body>
+<div id="mainContent">
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav-header">
+  <div class="logo">🩸 BloodConnect</div>
+
+   <div id="hamburger" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+
+<!-- ================= SIDE MENU ================= -->
+</footer>
+
+</div> <!-- End mainContent -->
+
+
+<!-- ================= SIDE MENU ================= -->
+<nav id="sideMenu" class="side-menu">
+
+  <div id="sideClose" class="side-close">
+    <span></span>
+    <span></span>
+  </div>
+
+  <a href="#about" class="pill-link">About</a>
+  <a href="#services" class="pill-link">Services</a>
+  <a href="#process" class="pill-link">Process</a>
+  <a href="#trust" class="pill-link">Trust</a>
+
+  <div class="pill-dropdown">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=harshathatipamula0@gmail.com&su=BloodConnect Inquiry&body=Hello BloodConnect Team,"
+       target="_blank"
+       class="pill-link contact-pill">
+       Contact Us
+    </a>
+
+    <div class="pill-content">
+      NOTE:- This is not for emergency purpose.
+      It is for website technical help only.
+    </div>
+  </div>
+
+  <div class="menu-divider"></div>
+
+  <button id="logoutBtn" class="pill-logout">Logout</button>
+</nav>
+
+<div id="overlay" class="overlay"></div>
+
+</body>
+</html>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content reveal">
+    <h1>Ensuring Safe & Timely Blood Availability</h1>
+    <p>
+      A hospital-grade digital platform connecting donors,
+      recipients and healthcare institutions securely and efficiently.
+    </p>
+    <a href="../features/features.html" class="explore-btn">
+      Explore Services
+    </a>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section light reveal">
+  <div class="container">
+    <h2 class="section-title workflow-heading">OUR SERVICES</h2>
+
+    <div class="grid">
+      <div class="card reveal">
+        <h3>Donor Registration</h3>
+        <p>Secure signup and donor profile management system.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Blood Request System</h3>
+        <p>Real-time request submission and status tracking.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Admin Monitoring</h3>
+        <p>Full administrative control and activity oversight.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Location Matching</h3>
+        <p>Find nearby compatible donors quickly and accurately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+<section id="process" class="section workflow-section">
+  <div class="container">
+    <h2 class="section-title workflow-heading">OPERATIONAL WORKFLOW</h2>
+
+    <div class="workflow-wrapper">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Register</h3>
+        <p>Create verified donor or recipient profile.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Search / Request</h3>
+        <p>Find nearby donors or submit urgent request.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Donate & Save</h3>
+        <p>Complete donation process and save lives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section id="trust" class="section">
+
+  <h2 class="section-title reveal">Why Trust BloodConnect?</h2>
+
+  <div class="trust-container">
+
+    <div class="trust-card trust-security reveal-left">
+      <div class="trust-content">
+        <h3>Data Security</h3>
+        <p>
+          We implement secure authentication mechanisms, encrypted data transmission,
+          and strict role-based access control to ensure that sensitive donor and
+          recipient information remains protected at every stage. Our infrastructure
+          follows modern security standards to prevent unauthorized access, data leaks,
+          and system vulnerabilities.
+        </p>
+      </div>
+    </div>
+
+    <div class="trust-card trust-matching reveal-right">
+      <div class="trust-content">
+        <h3>Reliable Matching</h3>
+        <p>
+          Our intelligent matching system analyzes blood group compatibility,
+          location proximity, and real-time availability to connect donors and
+          recipients quickly and accurately. By leveraging smart filtering
+          algorithms, we minimize response time and maximize successful
+          life-saving matches.
+        </p>
+      </div>
+    </div>
+
+    <div class="trust-card trust-transparency reveal-left">
+      <div class="trust-content">
+        <h3>Transparency</h3>
+        <p>
+          BloodConnect ensures complete visibility into every request and donation
+          process. From submission to fulfillment, users and administrators can
+          track status updates, request history, and activity logs in real time.
+          This promotes accountability, trust, and efficient coordination across
+          the entire network.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!---Count Section--->
+
+
+<!-- ================= CHARITY ================= -->
+<section class="charity-section">
+  <div class="charity-container">
+    <h2>❤️ Support Life-Saving Missions</h2>
+    <p>
+      Your donation helps maintain emergency response systems
+      and real-time blood availability tracking.
+    </p>
+    <a href="../charity/charity.html" class="charity-btn">
+      Donate Now
+    </a>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="container reveal">
+    <h2>Supporting Healthcare Through Technology</h2>
+    <p>Join our mission to build a faster and safer blood network.</p>
+    <a href="../features/features.html" class="join-btn">
+      Join The Network
+    </a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section light reveal">
+  <div class="container reveal">
+    <h2 class="section-title workflow-heading">ABOUT BLOODCONNECT</h2>
+    <p>
+      BloodConnect is a hospital-oriented digital platform built to modernize and simplify the
+blood donation ecosystem. It enables seamless donor registration, efficient emergency
+blood request handling, and real-time availability monitoring through a secure and
+technology-driven infrastructure. By intelligently connecting donors, recipients, and
+healthcare institutions, BloodConnect reduces response time, improves matching accuracy,
+and ensures transparency at every stage of the donation lifecycle. Our mission is to
+create a faster, safer, and more reliable blood network that supports life-saving efforts
+when they matter most.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>© 2026 BloodConnect | Hospital Digital System</p>
+</footer>
+</div> <!-- End mainContent -->
+
+</body>
+</html>
+
+
+
+<script src="home.js"></script>

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(255,255,255,0.85),
+        rgba(255,255,255,0.85)
+    ),
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1920&q=80");
+
+    background-size: cover;
+    background-position: center;
+    padding: 40px 60px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255,255,255,0.95);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #c40000;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #c40000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(196,0,0,0.2);
+}
+
+.phone-wrapper {
+    display: flex;
+}
+
+.country-code {
+    background: #eee;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-weight: 600;
+}
+
+.phone-wrapper input {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px;
+    font-size: 16px;
+    background: linear-gradient(90deg,#c40000,#e63939);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Donor Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Complete Donor Profile</h1>
+
+    <form id="profileForm">
+
+        <div class="form-grid">
+
+            <!-- Full Name -->
+            <div>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <!-- Address -->
+            <div class="full">
+                <label for="address">Address</label>
+                <textarea id="address" rows="3" required></textarea>
+            </div>
+
+            <!-- Pincode -->
+            <div>
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" maxlength="6" required>
+            </div>
+
+            <!-- Phone -->
+            <div>
+                <label for="phone">Phone Number</label>
+                <div class="phone-wrapper">
+                    <span class="country-code">+91</span>
+                    <input 
+                        type="tel" 
+                        id="phone"
+                        maxlength="10"
+                        placeholder="Enter 10 digit number"
+                        required
+                    >
+                </div>
+                <small id="phoneError" class="error"></small>
+            </div>
+
+            <!-- Area -->
+            <div>
+                <label for="area">Area</label>
+                <input type="text" id="area" required>
+            </div>
+
+            <!-- Blood Group -->
+            <div>
+                <label for="bloodGroup">Blood Group</label>
+                <select id="bloodGroup" required>
+                    <option value="">Select</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+
+            <!-- Gender -->
+            <div>
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Profile Photo (Optional UI only) -->
+            <div>
+                <label for="profilePhoto">Profile Photo (Optional)</label>
+                <input type="file" id="profilePhoto" accept="image/*">
+            </div>
+
+        </div>
+
+        <!-- Terms -->
+        <div class="terms-wrapper">
+            <input type="checkbox" id="agreeTerms" required>
+            <label for="agreeTerms">
+                I agree with the 
+                <a href="../terms.html" target="_blank">Terms and Conditions</a>
+            </label>
+        </div>
+
+      <div class="register-wrapper">
+  <button type="submit" class="register-btn">Register</button>
+  <span id="registerMsg" class="register-msg"></span>
+</div>
+
+
+    </form>
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

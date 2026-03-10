@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #b30000, #ff4d4d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+button {
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+
+/* Disable text selection globally */
+body {
+  user-select: none;
+}
+
+/* Allow selection ONLY inside input and textarea */
+input,
+textarea {
+  user-select: text;
+}

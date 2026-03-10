@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+    background-size: cover;
+    padding: 40px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input,
+.search-box select {
+    padding: 10px;
+    flex: 1;
+}
+
+.search-box button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.donor-card {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid red;
+    border-radius: 6px;
+}
+
+.phone {
+    cursor: pointer;
+    color: blue;
+    font-weight: bold;
+}
+
+
+/* Disable text selection globally */
+body {
+  user-select: none;
+}
+
+/* Allow selection ONLY inside input and textarea */
+input,
+textarea {
+  user-select: text;
+}
